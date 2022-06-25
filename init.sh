@@ -19,7 +19,11 @@ dpkg-reconfigure --frontend noninteractive tzdata
 rm -rf /var/lib/apt/lists/*
 
 apt update
-apt install git python3 npm make curl -y
+apt install git python3 npm make curl wget -y
+
+mkdir /usr/include/nlohmann/
+cd /usr/include/nlohmann/ && wget https://github.com/nlohmann/json/releases/download/v3.10.5/json.hpp
+
 npm config set registry http://registry.npm.taobao.org && npm install -g node-gyp
 curl -s https://install.zerotier.com | bash
 cd /opt && git clone -v https://githubfast.com/key-networks/ztncui.git
