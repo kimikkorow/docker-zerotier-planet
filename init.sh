@@ -22,12 +22,12 @@ apt update
 apt install git python3 npm make curl wget -y
 
 mkdir /usr/include/nlohmann/
-cd /usr/include/nlohmann/ && wget https://githubfast.com/nlohmann/json/releases/download/v3.10.5/json.hpp
+cd /usr/include/nlohmann/ && wget https://github.com/nlohmann/json/releases/download/v3.10.5/json.hpp
 
 npm config set registry http://registry.npm.taobao.org && npm install -g node-gyp
 curl -s https://install.zerotier.com | bash
-cd /opt && git clone -v https://githubfast.com/key-networks/ztncui.git
-cd /opt && git clone -v https://githubfast.com/zerotier/ZeroTierOne.git
+cd /opt && git clone -v https://github.com/key-networks/ztncui.git
+cd /opt && git clone -v https://github.com/zerotier/ZeroTierOne.git
 
 cd /opt/ztncui/src
 npm install
