@@ -1,6 +1,7 @@
 FROM kimikkorow/ubuntu22.04
 ENV TZ=Asia/Shanghai \
-    DEBIAN_FRONTEND=noninteractive
+    DEBIAN_FRONTEND=noninteractive \
+    GITHUB_PROXY=https://ghproxy.com/
 
 ADD . /app
 
