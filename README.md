@@ -34,7 +34,7 @@ git clone https://github.yuilier.eu.org/https://github.com/kimikkorow/docker-zer
 ## 3.3：执行安装脚本
 进入项目目录
 ```
-cd docker-zerotier-planet
+cd ./docker-zerotier-planet
 ```
 
 运行 `deploy.sh` 脚本
