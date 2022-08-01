@@ -28,7 +28,7 @@ sudo apt install git python3 npm make curl wget -y
 mkdir /usr/include/nlohmann/
 cd /usr/include/nlohmann/ && wget ${GITHUB_PROXY}https://github.com/nlohmann/json/releases/download/v3.10.5/json.hpp
 
-npm config set registry http://registry.npm.taobao.org && npm install -g node-gyp
+npm config set registry http://registry.npm.taobao.org && sudo npm install -g node-gyp
 
 #-----------------------------------------------------------------------------------------------------------------------------------
 # 原内容
@@ -36,7 +36,6 @@ npm config set registry http://registry.npm.taobao.org && npm install -g node-gy
 #-----------------------------------------------------------------------------------------------------------------------------------
 # kimikkorow修改的内容
 curl -s ${GITHUB_PROXY}https://raw.githubusercontent.com/kimikkorow/docker-zerotier-planet/master/install.zerotier.com.bash | bash
-sudo npm install -g node-gyp
 #-----------------------------------------------------------------------------------------------------------------------------------
 
 cd /opt && git clone -v ${GITHUB_PROXY}https://github.com/key-networks/ztncui.git --depth 1
