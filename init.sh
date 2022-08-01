@@ -14,7 +14,8 @@ deb-src https://mirrors.cloud.tencent.com/ubuntu/ jammy-backports main restricte
 echo "更新系统包，修改时区"
 apt update
 apt upgrade -y
-apt install -y tzdata
+apt install sudo -y
+sudo apt install -y tzdata
 ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime
 echo ${TZ} >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
