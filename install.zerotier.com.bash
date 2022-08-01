@@ -17,8 +17,16 @@ export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 
 # Base URL for download.zerotier.com tree; see https://github.com/zerotier/download.zerotier.com if you want to mirror.
 # Some things want http, some https, so we must specify both. Must include trailing /
-ZT_BASE_URL_HTTPS='https://download.zerotier.com/'
-ZT_BASE_URL_HTTP='http://download.zerotier.com/'
+
+#-------------------------------------------------------
+# 原内容
+# ZT_BASE_URL_HTTPS='https://download.zerotier.com/'
+# ZT_BASE_URL_HTTP='http://download.zerotier.com/'
+#-------------------------------------------------------
+# kimikkorow修改的内容
+ZT_BASE_URL_HTTPS='https://zt.yuilier.eu.org/'
+ZT_BASE_URL_HTTP='hhttps://zt.yuilier.eu.org/'
+#-------------------------------------------------------
 
 echo
 echo '*** ZeroTier Service Quick Install for Unix-like Systems'

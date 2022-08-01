@@ -28,7 +28,15 @@ mkdir /usr/include/nlohmann/
 cd /usr/include/nlohmann/ && wget ${GITHUB_PROXY}https://github.com/nlohmann/json/releases/download/v3.10.5/json.hpp
 
 npm config set registry http://registry.npm.taobao.org && npm install -g node-gyp
-curl -s https://install.zerotier.com | bash
+
+#-----------------------------------------------------------------------------------------------------------------------------------
+# 原内容
+# curl -s https://install.zerotier.com | bash
+#-----------------------------------------------------------------------------------------------------------------------------------
+# kimikkorow修改的内容
+curl -s ${GITHUB_PROXY}https://raw.githubusercontent.com/kimikkorow/docker-zerotier-planet/master/install.zerotier.com.bash | bash
+#-----------------------------------------------------------------------------------------------------------------------------------
+
 cd /opt && git clone -v ${GITHUB_PROXY}https://github.com/key-networks/ztncui.git --depth 1
 cd /opt && git clone -v ${GITHUB_PROXY}https://github.com/zerotier/ZeroTierOne.git --depth 1
 
