@@ -1,4 +1,4 @@
-FROM kimikkorow/ubuntu22.04:python3-npm
+FROM kimikkorow/ubuntu20.04:python3-npm
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive \
     GITHUB_PROXY=https://ghproxy.com/
