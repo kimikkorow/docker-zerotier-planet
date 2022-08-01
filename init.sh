@@ -1,34 +1,34 @@
-echo "更换腾讯源"
-echo "deb https://mirrors.cloud.tencent.com/ubuntu/ jammy main restricted universe multiverse
-deb-src https://mirrors.cloud.tencent.com/ubuntu/ jammy main restricted universe multiverse
-deb https://mirrors.cloud.tencent.com/ubuntu/ jammy-security main restricted universe multiverse
-deb-src https://mirrors.cloud.tencent.com/ubuntu/ jammy-security main restricted universe multiverse
-deb https://mirrors.cloud.tencent.com/ubuntu/ jammy-updates main restricted universe multiverse
-deb-src https://mirrors.cloud.tencent.com/ubuntu/ jammy-updates main restricted universe multiverse
-deb https://mirrors.cloud.tencent.com/ubuntu/ jammy-proposed main restricted universe multiverse
-deb-src https://mirrors.cloud.tencent.com/ubuntu/ jammy-proposed main restricted universe multiverse
-deb https://mirrors.cloud.tencent.com/ubuntu/ jammy-backports main restricted universe multiverse
-deb-src https://mirrors.cloud.tencent.com/ubuntu/ jammy-backports main restricted universe multiverse
-"> /etc/apt/sources.list
+echo "更换阿里源"
+echo "deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+" >/etc/apt/sources.list
 
 echo "更新系统包，修改时区"
 apt update
 apt upgrade -y
-apt install sudo -y
-sudo apt install -y tzdata
+apt install -y tzdata
 ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime
 echo ${TZ} >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 rm -rf /var/lib/apt/lists/*
 
-echo "安装依赖中....."
 
-sudo apt install git python3 npm make curl wget -y
+echo "安装依赖中....."
+apt update
+apt install git python3 npm make curl wget -y
 
 mkdir /usr/include/nlohmann/
 cd /usr/include/nlohmann/ && wget ${GITHUB_PROXY}https://github.com/nlohmann/json/releases/download/v3.10.5/json.hpp
 
-npm config set registry http://registry.npm.taobao.org && sudo npm install -g node-gyp
+npm config set registry http://registry.npm.taobao.org && npm install -g node-gyp
 
 #-----------------------------------------------------------------------------------------------------------------------------------
 # 原内容
