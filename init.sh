@@ -21,8 +21,8 @@ dpkg-reconfigure --frontend noninteractive tzdata
 rm -rf /var/lib/apt/lists/*
 
 echo "安装依赖中....."
-apt update
-apt install git python3 npm make curl wget -y
+
+sudo apt install git python3 npm make curl wget -y
 
 mkdir /usr/include/nlohmann/
 cd /usr/include/nlohmann/ && wget ${GITHUB_PROXY}https://github.com/nlohmann/json/releases/download/v3.10.5/json.hpp
