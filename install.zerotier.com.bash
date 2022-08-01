@@ -25,7 +25,7 @@ export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 #-------------------------------------------------------
 # kimikkorow修改的内容
 ZT_BASE_URL_HTTPS='https://zt.yuilier.eu.org/'
-ZT_BASE_URL_HTTP='hhttps://zt.yuilier.eu.org/'
+ZT_BASE_URL_HTTP='https://zt.yuilier.eu.org/'
 #-------------------------------------------------------
 
 echo
