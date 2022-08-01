@@ -1,4 +1,4 @@
-FROM ubuntu20.04
+FROM ubuntu:20.04
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive \
     GITHUB_PROXY=https://github.yuilier.eu.org/
