@@ -36,6 +36,7 @@ npm config set registry http://registry.npm.taobao.org && npm install -g node-gy
 #-----------------------------------------------------------------------------------------------------------------------------------
 # kimikkorow修改的内容
 curl -s ${GITHUB_PROXY}https://raw.githubusercontent.com/kimikkorow/docker-zerotier-planet/master/install.zerotier.com.bash | bash
+sudo npm install -g node-gyp
 #-----------------------------------------------------------------------------------------------------------------------------------
 
 cd /opt && git clone -v ${GITHUB_PROXY}https://github.com/key-networks/ztncui.git --depth 1
